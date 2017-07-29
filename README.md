@@ -1,6 +1,6 @@
 ﻿# Attendace List Manager
 
-Es una aplicación destinada a agilizar el proceso de almacenar los datos obtenidos de una clase al tomar asistencia. También incluye algunos addons, como la visualización gráfica de la asistencia del alumno por materia, y gráficos estadísticos que surgen de encuestas que se pueden realizar desde la misma aplicación. 
+Es una aplicación destinada a agilizar el proceso de almacenar los datos obtenidos de una clase al tomar asistencia y gráficos estadísticos que surgen de encuestas que se pueden realizar desde la misma aplicación. 
 
 ### Plugins utilizados
 
@@ -16,8 +16,15 @@ Es una aplicación destinada a agilizar el proceso de almacenar los datos obteni
 
 
 ```
-chart.js 2.6.0
-slim framework 3jwt
+Chart.js 2.6.0
+Slim framework 3
+Jwt
+Elementos ionic framewok
+Actionsheet
+Alerts
+Toast
+
+
 ```
 
 
@@ -26,14 +33,15 @@ slim framework 3jwt
 * **Manuel Peña Ramos** - *Github* - [manupg3](https://github.com/manupg3)
     *  Manejo de jwt como credencial y capa de seguridad
     *  Backend as a service, API REST, SLIM Framework
-    *  Implementacion de google maps   *  Wireframing, prototipado de la app
+    *  Implementacion de google maps   
     *  Implementación de plugins
     *  Programación y coordinación general, estableciendo pautas de trabajo, objetivos y resolución de conflictos
 
 * **Armocida Adrian** - *Github* - [armocidautn](https://github.com/armocidautn)
     *  Estilo general de la aplicación 
-   *  Testing
-    *  Diseño y administración de la base de datos (relacional SQL)    *  Manejo de gráficos estadísticos
+    *  Testing
+    *  Diseño y administración de la base de datos (relacional SQL)    
+    *  Manejo de gráficos estadísticos con highcharts
     *  Programación en la aplicacion y en la API rest.
 
 ## License
