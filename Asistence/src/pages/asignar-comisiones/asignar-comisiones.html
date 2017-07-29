@@ -1,0 +1,39 @@
+<!--
+  Generated template for the AsignarComisiones page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>asignarComisiones</ion-title>
+        <ion-buttons end>
+<button ion-button (click)="logOut()">
+       <ion-icon name="log-out" ></ion-icon>
+
+</button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60)">
+   <div>
+      <section style="text-align:center">
+           <p style="font-weight: bold;color:whitesmoke">
+             Agrega Las comisiones para el Curso de:{{nombreCurso}}
+               </p>
+         </section>
+
+     
+         </div>
+    <ion-item>
+  <ion-label>COMISIONES</ion-label>
+  <ion-select  [(ngModel)]="comisionesSeleccionadas" multiple="true" (ionChange)="onChange()">
+    <ion-option *ngFor=" let comision of comisionesId" value="{{comision.id_comision}}">{{comision.descripcion}}</ion-option>
+  </ion-select>
+</ion-item>
+       
+</ion-content>

@@ -1,0 +1,66 @@
+<!--
+  Generated template for the AbmUsuarios page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>abmUsuarios</ion-title>
+        <ion-buttons end>
+<button ion-button (click)="logOut()">
+       <ion-icon name="log-out" ></ion-icon>
+
+</button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60)" >
+  <div align="center">
+       <ion-card style="background:rgba(127, 179, 213 ,.6);width:100%">
+  <ion-card-header align="center" style="color:white">
+        ABM DE USUARIOS
+  </ion-card-header>
+
+  <ion-list>
+    <button style="font-size: 100%" ion-item (click)="RegistrarUsuario()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+        Registrar un Usuarios
+    </button>
+
+    <button style="font-size: 100%" ion-item (click)="ListaUsuarios()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+       Borrar/Modificar un Usuario
+    </button>
+  </ion-list>
+</ion-card>
+</div>
+ <div *ngIf="mostrarListaUsuarios" >
+<!--  <ion-grid  style="width:100%">
+  <ion-row *ngFor="let usuario of Usuarios">
+    <ion-col col-8  style="font-size: 100%;padding-top:40px;display:inline" >
+{{usuario.nombre}} {{usuario.apellido}}
+ 
+    </ion-col>
+    <ion-col  style="display:block">
+  
+     <button  ion-button clear item-end (click)="Modificar()">Modificar</button>
+  <button   ion-button clear item-end (click)="Borrar()">Borrar</button>
+    </ion-col>
+  
+  </ion-row>
+</ion-grid>-->
+<ion-list >
+  <ion-item style="background:rgba(127, 179, 213 ,.2);display:block;font-weight:bold" *ngFor="let usuario of Usuarios">
+   <h2 style="color:white;font-size:80%"> {{usuario.nombre}} {{usuario.apellido}}</h2>
+    <button style="font-size:60%;font-weight:bold;width:20%"  ion-button clear item-end (click)="Modificar(usuario)">Modificar</button>
+    <button  style="font-size:60%;font-weight:bold;width:20%"  ion-button clear item-end (click)="Borrar(usuario.id_user)">Borrar</button>
+  </ion-item>
+</ion-list>
+
+ </div>     
+</ion-content>

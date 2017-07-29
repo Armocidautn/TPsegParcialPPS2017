@@ -1,0 +1,51 @@
+<!--
+  Generated template for the AsignarAlumnos page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>asignarAlumnos</ion-title>
+        <ion-buttons end>
+<button ion-button (click)="logOut()">
+       <ion-icon name="log-out" ></ion-icon>
+
+</button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60)">
+    <div *ngIf="ocultar">
+      <ion-item>
+  <ion-label>ALUMNOS</ion-label>
+  <ion-select  [(ngModel)]="alumnoSeleccionado" (ionChange)="onChange()">
+    <ion-option *ngFor=" let alumno of alumnos" value="{{alumno.id_user}}">{{alumno.nombre}}-{{alumno.apellido}}</ion-option>
+  </ion-select>
+</ion-item>
+         <ion-item>
+  <ion-label>CURSOS</ion-label> 
+  <ion-select  [(ngModel)]="CursosSeleccionados" (ionChange)="onChangeCurso()">
+    <ion-option *ngFor=" let curso of Cursos" value="{{curso.id_curso}}">{{curso.descripcion_curso}}</ion-option>
+  </ion-select>
+</ion-item>
+<button ion-button [disabled]="!isenabled" block (click)="IngresarAlumnosAcursos()" style="background:rgba(127, 179, 213 ,.6)">INGRESAR ALUMNOS A CURSO</button>
+ </div>
+  <div *ngIf="mostrarComisionesDeCurso">
+             <ion-item>
+  <ion-label>COMISIONES DEL CURSO</ion-label> 
+  <ion-select  [(ngModel)]="ComisionesSeleccionadas" multiple="true" (ionChange)="onChangeComision()">
+
+    <ion-option *ngFor=" let comisiones of ComisionesXcurso" value="{{comisiones.id_comision}}">{{comisiones.descripcion}}</ion-option>
+  </ion-select>
+</ion-item>
+  </div>
+       
+       
+
+
+</ion-content>

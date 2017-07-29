@@ -1,0 +1,69 @@
+<!--
+  Generated template for the Asistencia page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>asistencia</ion-title>
+     <ion-buttons end>
+<button ion-button (click)="logOut()">
+       <ion-icon name="log-out" ></ion-icon>
+
+</button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60)">
+   <div *ngIf="mostrarCursos">
+
+      <ion-card style="width:100%">
+  <ion-card-header align="center">
+        SELECCIONE EL CURSO A TOMAR ASISTENCIA
+  </ion-card-header>
+  <ion-list>
+    <button *ngFor="let curso of Cursos" ion-item (click)="AcursoAsistencia(curso.id_curso)">
+      <ion-icon name="md-clipboard" item-start></ion-icon>
+          {{curso.descripcion_curso}}
+     </button>
+  </ion-list>
+</ion-card> 
+   </div>
+  <div *ngIf="mostrarComisiones">
+        <ion-card style="width:100%">
+  <ion-card-header align="center">
+        SELECCIONE LA COMISION A TOMAR ASISTENCIA
+  </ion-card-header>
+  <ion-list>
+    <button *ngFor="let comision of Comisiones" ion-item (click)="ListaPorComision(comision.id_comision)">
+      <ion-icon name="md-school" item-start></ion-icon>
+          {{comision.descripcion}}
+     </button>
+  </ion-list>
+</ion-card> 
+   </div>
+     <div *ngIf="mostrarLista">
+        <ion-card style="width:100%">
+  <ion-card-header align="center">
+        LISTA DE ALUMNOS
+  </ion-card-header>
+ <ion-list >
+             <ion-item>
+  <ion-label>DESPLEGAR LISTA</ion-label> 
+  <ion-select  [(ngModel)]="AlumnosPresentes" multiple="true" (ionChange)="onChangeComision()">
+
+    <ion-option *ngFor=" let alumno of Alumnos" value="{{alumno.id_user}}">{{alumno.nombre}}</ion-option>
+  </ion-select>
+</ion-item>
+  </ion-list>
+</ion-card> 
+        <button ion-button (click)="guardarAsistencia()" block style="margin-left:3%;background:rgba(127, 179, 213 ,.6)">GUARDAR ASISTENCIA</button>
+   </div>
+
+     
+</ion-content>

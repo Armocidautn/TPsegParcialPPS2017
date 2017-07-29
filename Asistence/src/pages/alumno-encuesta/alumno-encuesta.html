@@ -1,0 +1,78 @@
+<!--
+  Generated template for the AlumnoEncuesta page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+      <button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title align="center">alumno-encuesta</ion-title>
+        <ion-buttons end>
+<button ion-button (click)="logOut()">
+       <ion-icon name="log-out" ></ion-icon>
+
+</button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div id="Alumno" *ngIf="Alumno">
+  <div *ngIf="MostrarEncuestas">
+   
+        <ion-card style="width:50%">
+  <ion-list>
+    <button *ngFor="let encuesta of Encuestas" ion-item (click)="Responder(encuesta.tipo_respuesta,encuesta.pregunta,encuesta.id_cuestionario,encuesta.id_curso)">
+      <ion-icon name="cart" item-start></ion-icon>
+          {{encuesta.pregunta}}
+     </button>
+  </ion-list>
+</ion-card>              
+         </div>
+         <div *ngIf="texto">
+             <ion-item>
+                     <ion-label floating>Tu Respuesta</ion-label>
+                     <ion-input type="text"  [(ngModel)]="respuesta"></ion-input>
+                      </ion-item>
+        <button ion-button (click)="guardarRespuesta()">GUARDAR</button>
+         </div>
+           <div *ngIf="opcional">
+                     <ion-item >
+  <ion-label>Respuesta</ion-label>
+  <ion-select #R [(ngModel)]="OpcionesRespuesta" (ionChange)="onChange(R.value)">
+    <ion-option value="bueno">BUENO</ion-option>
+    <ion-option value="regular">REGULAR</ion-option>
+    <ion-option value="malo">MALO</ion-option>
+    
+  </ion-select>
+</ion-item> 
+
+<button ion-button (click)="guardarRespuestaOpcional()">GUARDAR Opcional</button>
+         </div>
+
+         </div>
+         <div *ngIf="Profesor">
+             <ion-list>
+  <ion-item *ngFor="let encuesta of Encuestas">
+    <h2>PREGUNTA: {{encuesta.pregunta}}</h2>
+    <h2>TIPO RESPUESTA: {{encuesta.tipo_respuesta}}</h2>
+    
+    <button ion-button clear item-end (click)="Modificar(encuesta)">Modificar</button>
+    <button ion-button clear item-end (click)="Borrar(encuesta.id_cuestionario)">Borrar</button>
+  </ion-item>
+</ion-list>
+       
+
+         </div>
+     <div *ngIf="Pendientes">
+         <h2>{{nohayencuestas}}</h2>
+     </div>
+</ion-content>

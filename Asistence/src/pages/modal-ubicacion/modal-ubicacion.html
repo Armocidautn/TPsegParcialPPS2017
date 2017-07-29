@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ModalUbicacion page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons>
+          <button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Modal Ubicacion</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60)">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="9">
+  <agm-marker [latitude]="lat" [longitude]="lng">
+    <agm-info-window ><ion-icon name="contact"></ion-icon>Usted se encuentra aqui!</agm-info-window>
+  </agm-marker>
+   <agm-marker [latitude]="latUtn" [longitude]="longUtn">
+    <agm-info-window >  <ion-icon name="home"></ion-icon>Utn Fra</agm-info-window>
+  </agm-marker>
+</agm-map>
+</ion-content>

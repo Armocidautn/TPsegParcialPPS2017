@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align="center">Home</ion-title>
+    <ion-buttons end>
+<button ion-button (click)="miPerfil()">
+       <ion-icon name="person" ></ion-icon>
+
+</button>
+</ion-buttons>
+ <ion-buttons end>
+<button ion-button (click)="logOut()">
+       <ion-icon name="log-out" ></ion-icon>
+
+</button>
+</ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background:rgb(33, 47, 60)">
+ <div  *ngIf="Admin" align="center" >
+       <ion-card  style="background:rgba(127, 179, 213 ,.6);width:100%" [@flyInOut]="state">
+  <ion-card-header align="center" style="color:white">
+        MENU ADMIN
+  </ion-card-header>
+
+  <ion-list >
+    <button ion-item (click)="abmUsuarios()">
+      <ion-icon  name="add-circle" item-start ></ion-icon>
+        ABM de Usuarios
+    </button>
+
+    <button ion-item (click)="abmCursos()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+       ABM de Cursos
+    </button>
+
+    <button ion-item (click)="abmComisiones()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+       ABM de Comisiones
+    </button>
+
+ 
+  </ion-list>
+</ion-card>     
+      
+      </div>
+ <div id="Administrativo" *ngIf="Administrativo"  [@flyInOut]="state">
+           
+     <ion-card style="width:100%;background:rgba(127, 179, 213 ,.6)">
+  <ion-card-header align="center"  style="color:white">
+        MENU ADMINISTRATIVO
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item (click)="abmUsuariosCursos()">
+      <ion-icon name="md-man" item-start></ion-icon>
+      ASIGNAR ALUMNOS A CURSOS
+    </button>
+
+    <button ion-item (click)="Aestadisticas()">
+      <ion-icon name="md-pie" item-start></ion-icon>
+      VER GRAFICOS ESTADISTICOS
+    </button>
+      <button ion-item (click)="generarTxt()">
+      <ion-icon name="md-paper" item-start></ion-icon>
+      GENERAR TXT DE RESPUESTAS
+    </button>
+          <button ion-item (click)="verAsistencias()">
+      <ion-icon name="md-hand" item-start></ion-icon>
+        VER ASISTENCIAS 
+          </button>
+  </ion-list>
+</ion-card>     
+
+      </div>
+  <div id="Profesor" *ngIf="Profesor"  [@flyInOut]="state">
+     <ion-card style="width:100%;background:rgba(127, 179, 213 ,.6)">
+  <ion-card-header align="center"  style="color:white">
+        MENU PROFESOR
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item (click)="crearEncuesta()">
+      <ion-icon name="md-create" item-start></ion-icon>
+      CREAR ENCUESTA
+    </button>
+       
+    <button ion-item (click)="Asistencia()">
+      <ion-icon name="md-hand" item-start></ion-icon>
+      TOMAR ASISTENCIA
+    </button>
+
+  </ion-list>
+</ion-card>     
+
+
+      </div>
+  <div id="Alumno" *ngIf="Alumno"  [@flyInOut]="state"> 
+  
+     <ion-grid style="color:white;border:solid;width:100%">
+  <ion-row style="color:white;border-bottom:solid">
+    <ion-col col-4 style="color:white;font-size:100%" >CURSOS</ion-col>
+    <ion-col col-4 style="color:white;font-size:100%">DIAS</ion-col>
+    <ion-col col-4 style="color:white;font-size:100%">HORARIOS</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let curso of Cursos" style="border-bottom:solid 1px">
+    <ion-col col-4 style="color:white;font-size:100%">{{curso.descripcion_curso}}</ion-col>
+    <ion-col col-4 style="color:white;font-size:100%">{{curso.dias}}</ion-col>
+    <ion-col col-4  style="color:white;font-size:100%" >{{curso.horarios}}</ion-col>
+  </ion-row>
+</ion-grid>
+    <div align="center">
+      <button ion-button block (click)="Ubicacion()" style="background:rgba(127, 179, 213 ,.6)">
+         ESTABLECER UBICACION</button>
+    </div>
+  <div>
+
+  </div>
+      </div>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ModalModificar page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>modalModificar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-input style="border-bottom:solid 1px" type="text" [(ngModel)]="nombreAmod" name="nombre"  required></ion-input>
+    <ion-input style="border-bottom:solid 1px" type="text" [(ngModel)]="apellidoAmod" name="apellido"  required></ion-input>
+    <ion-input style="border-bottom:solid 1px" type="text" [(ngModel)]="mailAmod" name="mail"  required></ion-input>
+    <button ion-button block type="button" (click)="reg(usuario)">INGRESAR MODIFICACIONES</button> 
+
+
+</ion-content>

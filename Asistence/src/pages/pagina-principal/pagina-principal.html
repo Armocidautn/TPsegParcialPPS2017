@@ -1,0 +1,185 @@
+<!--
+  Generated template for the PaginaPrincipal page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PaginaPrincipal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div  *ngIf="Admin" align="center">
+       <ion-card style="width:50%">
+  <ion-card-header align="center">
+        MENU
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item (click)="abmUsuarios()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+        ABM de Usuarios
+    </button>
+
+    <button ion-item (click)="abmCursos()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+       ABM de Cursos
+    </button>
+
+    <button ion-item (click)="abmComisiones()">
+      <ion-icon name="add-circle" item-start></ion-icon>
+       ABM de Comisiones
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-start></ion-icon>
+      Dog Park
+    </button>
+
+    <button ion-item>
+      <ion-icon name="beer" item-start></ion-icon>
+      Pub
+    </button>
+
+    <button ion-item>
+      <ion-icon name="planet" item-start></ion-icon>
+      Space
+    </button>
+
+  </ion-list>
+</ion-card>     
+      
+      </div>
+ <div id="Administrativo" *ngIf="Administrativo">
+           
+     <ion-card style="width:50%">
+  <ion-card-header align="center">
+        MENU ADMINISTRATIVO
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="cart" item-start></ion-icon>
+      Shopping
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-start></ion-icon>
+      Hospital
+    </button>
+
+    <button ion-item>
+      <ion-icon name="cafe" item-start></ion-icon>
+      Cafe
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-start></ion-icon>
+      Dog Park
+    </button>
+
+    <button ion-item>
+      <ion-icon name="beer" item-start></ion-icon>
+      Pub
+    </button>
+
+    <button ion-item>
+      <ion-icon name="planet" item-start></ion-icon>
+      Space
+    </button>
+
+  </ion-list>
+</ion-card>     
+
+      </div>
+  <div id="Profesor" *ngIf="Profesor">
+     <ion-card style="width:50%">
+  <ion-card-header align="center">
+        MENU
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="cart" item-start></ion-icon>
+      Shopping
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-start></ion-icon>
+      Hospital
+    </button>
+
+    <button ion-item>
+      <ion-icon name="cafe" item-start></ion-icon>
+      Cafe
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-start></ion-icon>
+      Dog Park
+    </button>
+
+    <button ion-item>
+      <ion-icon name="beer" item-start></ion-icon>
+      Pub
+    </button>
+
+    <button ion-item>
+      <ion-icon name="planet" item-start></ion-icon>
+      Space
+    </button>
+
+  </ion-list>
+</ion-card>     
+
+
+      </div>
+  <div id="Alumno" *ngIf="Alumno">
+     <ion-card style="width:50%">
+  <ion-card-header align="center">
+        MENU
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="cart" item-start></ion-icon>
+      Shopping
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-start></ion-icon>
+      Hospital
+    </button>
+
+    <button ion-item>
+      <ion-icon name="cafe" item-start></ion-icon>
+      Cafe
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-start></ion-icon>
+      Dog Park
+    </button>
+
+    <button ion-item>
+      <ion-icon name="beer" item-start></ion-icon>
+      Pub
+    </button>
+
+    <button ion-item>
+      <ion-icon name="planet" item-start></ion-icon>
+      Space
+    </button>
+
+  </ion-list>
+</ion-card>     
+
+
+      </div>
+
+</ion-content>

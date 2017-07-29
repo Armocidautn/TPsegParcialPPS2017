@@ -1,0 +1,64 @@
+<!--
+  Generated template for the VerAsistencia page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ver Asistencia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60)">
+       <div >
+
+      <ion-card style="width:100%">
+  <ion-card-header align="center">
+        SELECCIONE EL CURSO 
+  </ion-card-header>
+  <ion-list>
+    <button *ngFor="let curso of Cursos" ion-item (click)="AcursoAsistencia(curso.id_curso)">
+      <ion-icon name="md-school" item-start></ion-icon>
+          {{curso.descripcion_curso}}
+     </button>
+  </ion-list>
+</ion-card> 
+   </div>
+  <div *ngIf="mostrarComisiones" >
+        <ion-card style="width:100%">
+  <ion-card-header align="center">
+        SELECCIONE LA COMISION 
+  </ion-card-header>
+  <ion-list>
+    <button *ngFor="let comision of Comisiones" ion-item (click)="ListaPorComision(comision.id_comision)">
+      <ion-icon name="md-school" item-start></ion-icon>
+          {{comision.descripcion}}
+     </button>
+  </ion-list>
+</ion-card> 
+   </div >
+   <div style="margin-left:3%">
+        <ion-grid style="color:white;border:solid" >
+  <ion-row style="color:white;border-bottom:solid"  >
+  <ion-col col-3  style="color:white;font-size:71%">FECHA</ion-col>
+  <ion-col col-3  style="color:white;font-size:71%">ID ALUMNO</ion-col>
+  <ion-col col-3  style="color:white;font-size:71%">NOMBRE</ion-col>
+  <ion-col col-3  style="color:white;font-size:71%">P/A</ion-col>
+
+     
+  </ion-row>
+  <ion-row *ngFor="let lista of ListaAsistencia" style="border-bottom:solid 1px">
+    <ion-col style="font-size:71%" col-3>{{lista.fecha}}</ion-col>
+    <ion-col style="font-size:71%" col-3 >{{lista.id_alumno}}</ion-col>
+    <ion-col style="font-size:71%" col-3  >{{lista.id_curso}}</ion-col>
+    <ion-col style="font-size:71%"  col-3 >{{lista.presente_ausente}}</ion-col> 
+  </ion-row>
+</ion-grid>
+  <button ion-button block (click)="exportarCVS()" style="background:rgba(127, 179, 213 ,.6)">EXPORTAR DATOS</button>
+   </div>
+
+</ion-content>

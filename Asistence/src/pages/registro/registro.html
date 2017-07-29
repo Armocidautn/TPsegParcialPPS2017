@@ -1,0 +1,31 @@
+<!--
+  Generated template for the Registro page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>registro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:rgb(33, 47, 60  )">
+    <ion-input type="text" [(ngModel)]="usuario.nombre" name="nombre" placeholder="Ingrese Nombre" required style="color:white"></ion-input>
+    <ion-input type="text" [(ngModel)]="usuario.apellido" name="apellido" placeholder="Ingrese Apellido" required style="color:white"></ion-input>
+<ion-item  *ngIf="selectPerfil" style="background:rgba(127, 179, 213 ,.6)">
+  <ion-label style="color:white">Perfil </ion-label>
+  <ion-select #C [(ngModel)]="perfil" (ionChange)="onChange(C.value)">
+    <ion-option value="Administrador">ADMINISTRADOR</ion-option>
+    <ion-option value="Administrativo">ADMINISTRATIVO</ion-option>
+    <ion-option value="Profesor">PROFESOR</ion-option>
+    <ion-option value="Alumno">ALUMNO</ion-option>
+  </ion-select>
+</ion-item>  
+  <ion-input type="text" [(ngModel)]="usuario.email" name="email" placeholder="Ingrese Email" required style="color:white"></ion-input>
+    <ion-input type="password" [(ngModel)]="usuario.password" name="password" placeholder="Ingrese Clave" required style="color:white"></ion-input>
+    <button ion-button block type="button"  (click)="reg(usuario)"style="background:rgba(127, 179, 213 ,.6)">Registrar</button> 
+</ion-content>
