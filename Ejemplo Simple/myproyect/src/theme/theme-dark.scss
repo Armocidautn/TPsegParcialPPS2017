@@ -1,0 +1,82 @@
+.dark-theme{$colors: (but:#3D5873,);
+.lala{.button{
+
+border-radius:0px ;
+background-color: #5D6D7E;
+color:#fff;
+
+
+}}
+  ion-content{
+background-image: url('../assets/img/ColdICe.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+
+
+  }
+.toolbar-title{
+
+ color:#fff;
+
+}
+.header .toolbar-background{
+border-color:#fff ;
+background-color: #3D5873;
+
+
+  }
+ion-item {
+border-color:red ;
+// background-color: #fff ;
+//color:#fff;
+
+border-color:#000 ;
+}
+.segment-md .segment-button {
+background-color: #3D5873;
+color:#fff;
+
+
+}
+
+buttn{
+border-color:red ;
+background-color: #3D5873 ;
+color:#fff;
+
+
+}
+$colors: (but:#3D5873,);
+ion-segment{
+       
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border: 1px solid #ffffff;
+         border-bottom: 0px !important;
+         box-shadow: none !important;
+         background-color: #3D5873;
+
+
+}
+
+input-cover{color:#fff;
+
+background-color: #fff;
+
+}
+.logo-row {
+    padding-top: 50px;
+     padding-bottom: 20px;
+      align-items: center;    } .ion-row {
+       align-items: center;      
+         text-align: center;
+     }
+
+     
+ion-card-header{
+background-color: #3D5873 ;
+color:#fff;
+
+
+}     
+}

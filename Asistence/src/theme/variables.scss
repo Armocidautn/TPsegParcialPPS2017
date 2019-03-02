@@ -1,3 +1,5 @@
+
+
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
 
@@ -47,6 +49,11 @@ $colors: (
 // iOS only Sass variables can go here
 
 
+
+
+@import "theme-dark";
+@import "theme-light";
+@import "theme-brown";
 
 $action-sheet-md-text-align:(center);
 // App Material Design Variables

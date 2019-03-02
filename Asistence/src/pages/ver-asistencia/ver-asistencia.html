@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding style="background:rgb(33, 47, 60)">
+<ion-content padding >
        <div >
 
       <ion-card style="width:100%">
@@ -41,7 +41,7 @@
   </ion-list>
 </ion-card> 
    </div >
-   <div style="margin-left:3%">
+   <div style="margin-left:3%" class="lala">
         <ion-grid style="color:white;border:solid" >
   <ion-row style="color:white;border-bottom:solid"  >
   <ion-col col-3  style="color:white;font-size:71%">FECHA</ion-col>
@@ -51,14 +51,14 @@
 
      
   </ion-row>
-  <ion-row *ngFor="let lista of ListaAsistencia" style="border-bottom:solid 1px">
+  <ion-row   *ngFor="let lista of ListaAsistencia" style="border-bottom:solid 1px">
     <ion-col style="font-size:71%" col-3>{{lista.fecha}}</ion-col>
     <ion-col style="font-size:71%" col-3 >{{lista.id_alumno}}</ion-col>
     <ion-col style="font-size:71%" col-3  >{{lista.id_curso}}</ion-col>
     <ion-col style="font-size:71%"  col-3 >{{lista.presente_ausente}}</ion-col> 
   </ion-row>
 </ion-grid>
-  <button ion-button block (click)="exportarCVS()" style="background:rgba(127, 179, 213 ,.6)">EXPORTAR DATOS</button>
+  <button ion-button block (click)="exportarCVS()" color="but">EXPORTAR DATOS</button>
    </div>
 
 </ion-content>

@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Login } from '../pages/login/login';
 import { AlumnoEncuesta } from '../pages/alumno-encuesta/alumno-encuesta';
-
+import {Settings} from '../providers/settings';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,15 +18,17 @@ export class MyApp {
   rootPage: any = Login;
 
   pages: Array<{title: string, component: any}>;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+selectedTheme:String;
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private settings:Settings) {
+        this.settings.getActiveTheme().subscribe(val=> this.selectedTheme=val);
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Encuestas', component: AlumnoEncuesta }
+      { title: 'Encuestas', component: AlumnoEncuesta },
+      { title: 'Información', component: ListPage }
+    
       
 
     ];

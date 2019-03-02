@@ -62,8 +62,8 @@
          <div *ngIf="Profesor">
              <ion-list>
   <ion-item *ngFor="let encuesta of Encuestas">
-    <h2>PREGUNTA: {{encuesta.pregunta}}</h2>
-    <h2>TIPO RESPUESTA: {{encuesta.tipo_respuesta}}</h2>
+    <h2 style="color:black;">PREGUNTA: {{encuesta.pregunta}}</h2>
+    <h2 style="color:black;">TIPO RESPUESTA: {{encuesta.tipo_respuesta}}</h2>
     
     <button ion-button clear item-end (click)="Modificar(encuesta)">Modificar</button>
     <button ion-button clear item-end (click)="Borrar(encuesta.id_cuestionario)">Borrar</button>

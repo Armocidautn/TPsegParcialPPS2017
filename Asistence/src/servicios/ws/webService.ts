@@ -10,8 +10,8 @@ import { AuthHttp,AuthConfig } from 'angular2-jwt';
        constructor(private http:Http,authhttp:AuthHttp ){
          console.log("WEB-SERVICE");
        }
-      url:string="http://crazypizza.esy.es/Asistente/";
-     //  url:string="http://localhost/Asistence/index.php/";
+     url:string="http://adrianrockerito88.000webhostapp.com/Asistente/index.php/";
+     // url:string="http://localhost/Asistence/index.php/";
      
      altaC(curso):Observable<any>{
 let JsonV=JSON.stringify(curso);            

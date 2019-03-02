@@ -6,14 +6,24 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
+<ion-navbar >
+ 
+   <ion-title>Login</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="showConfirm()" >
+        <ion-icon name="color-palette" ></ion-icon>
+      </button>
+     <button ion-button icon-only color="light" (click)="ayuda()" >
+        <ion-icon name="help-circle"></ion-icon>
+     </button>
+    </ion-buttons>
+
+</ion-navbar>
 
 </ion-header>
 
 
-   <ion-content padding scroll="false" align="center" style="background:rgb(33, 47, 60  )" >
+   <ion-content padding scroll="false" align="center"  >
                 <div align="center">
 
                     <div class="list">
@@ -27,21 +37,21 @@
                       </ion-item>
                     </div>
                      
-                    <button ion-button block (click)="login()" style="background:rgba(127, 179, 213 ,.6)">
+                    <button color="positive" ion-button block (click)="login()" >
                         Loguearse
                     </button>
 
-                    <div  style="width:100%;padding:0%">
+                   <ion-list class="lala">
                         
-                            <button style="color:white;background:rgba(93,109, 126 ,.4);width:45%;font-size:100%" ion-button color="light" (click)="aRegistro()">
+                            <button  style="width:45%;font-size:100%" ion-button color="botton" (click)="aRegistro()">
                                  Nueva cuenta
                           </button>
-                               <button style="color:white;background:rgba(93,109, 126 ,.4);width:45%;font-size:100%" ion-button color="light" (click)="cargarUsuario()">
-                                Cargar Usuarios
+                               <button style="width:45%;font-size:100%" ion-button color="but" (click)="cargarUsuario()">
+                                Usuarios
                             </button>
                         
-                    </div>
-              
+                </ion-list>
+
           </div>
         
     </ion-content>

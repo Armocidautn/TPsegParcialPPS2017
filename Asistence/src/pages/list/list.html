@@ -1,23 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content >
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <ion-navbar>
+    <ion-title>Información</ion-title>
+        <ion-buttons end>
+
+
+
+</ion-buttons>
+  </ion-navbar>
+   
+</ion-header>
+<ion-content padding >
+  
+
+
+<h1 style="color:white">ALUMNO: Armocida Adrian</h1>
+<br>
+<h1 style="color:white">GITHUB: Armocidautn</h1>
+<br>
+<h1 style="color:white">REPOSITORIO DEL PROYECTO: httpshttps://github.com/Armocidautn/TPsegParcialPPS2017</h1>
+
+
+
 </ion-content>

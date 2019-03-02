@@ -1,24 +1,25 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu" color="light"></ion-icon>
     </button>
+    
     <ion-title align="center">Home</ion-title>
     <ion-buttons end>
 <button ion-button (click)="miPerfil()">
-       <ion-icon name="person" ></ion-icon>
+       <ion-icon name="person" color="light"></ion-icon>
 
 </button>
 </ion-buttons>
  <ion-buttons end>
 <button ion-button (click)="logOut()">
-       <ion-icon name="log-out" ></ion-icon>
+       <ion-icon name="log-out" color="light"></ion-icon>
 
 </button>
 </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding style="background:rgb(33, 47, 60)">
+<ion-content padding >
  <div  *ngIf="Admin" align="center" >
        <ion-card  style="background:rgba(127, 179, 213 ,.6);width:100%" [@flyInOut]="state">
   <ion-card-header align="center" style="color:white">

@@ -7,7 +7,7 @@ import {PaginaPrincipal} from'../../pages/pagina-principal/pagina-principal';
 import { ActionSheetController } from 'ionic-angular';
 import { Vibration } from '@ionic-native/vibration';
 import { Http, Response, RequestOptions, Headers, RequestMethod } from '@angular/http';
-
+import {Settings} from '../../providers/settings';
 import { Observable } from 'rxjs/Observable';
 
 /**
@@ -34,15 +34,22 @@ export class User {
 })
 
 export class Login {
+   selectedTheme:String;
     user: User = new User('','');
 
    
-  constructor(public navCtrl: NavController,public http:Http,public vibration:Vibration,public alertCtrl:AlertController,public loadCtrl:LoadingController,public actionshet:ActionSheetController, public navParams: NavParams, private ws:webService) {
+  constructor(public navCtrl: NavController,private settings:Settings,public http:Http,public vibration:Vibration,public alertCtrl:AlertController,public loadCtrl:LoadingController,public actionshet:ActionSheetController, public navParams: NavParams, private ws:webService) {
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Login');
   }
+ayuda(){
+  
+  window.open('https://unsustained-accesse.000webhostapp.com', '_system');
+}
+ 
 
   cargarUsuario(){
     let actionSheet = this.actionshet.create({
@@ -149,4 +156,71 @@ export class Login {
      this.navCtrl.push(Registro);
 
    }
+
+
+
+showConfirm() {
+    
+    let confirm = this.alertCtrl.create({
+      title: '',
+      subTitle: 'Elija un estilo',
+      cssClass: 'custom-alertDanger',
+      buttons: [
+        {
+          text: 'Tema Noche',
+          handler: () => {this.encodeStyle('dark-theme'); 
+          }
+        },
+        {
+          text: 'Tema Día',
+          handler: () => { this.encodeStyle('brown-theme');
+             
+              
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+  encodeStyle(Style) {
+    let rv;
+    switch (Style) {
+      case "dark-theme":
+        this.settings.setActiveTheme('dark-theme');
+        break;
+      case "brown-theme":
+        this.settings.setActiveTheme('brown-theme');
+        break;
+      
+      default:
+       this.settings.setActiveTheme('button-light')
+        break;
+    }
+    
+  }
+toggleAppTheme(){
+if(this.selectedTheme == 'dark-theme'){
+
+this.settings.setActiveTheme('brown-theme');
+
+}else{
+
+
+this.settings.setActiveTheme('dark-theme');
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
 }

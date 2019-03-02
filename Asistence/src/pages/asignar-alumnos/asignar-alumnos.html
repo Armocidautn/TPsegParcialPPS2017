@@ -19,7 +19,7 @@
 </ion-header>
 
 
-<ion-content padding style="background:rgb(33, 47, 60)">
+<ion-content padding class="lala">
     <div *ngIf="ocultar">
       <ion-item>
   <ion-label>ALUMNOS</ion-label>
@@ -33,7 +33,7 @@
     <ion-option *ngFor=" let curso of Cursos" value="{{curso.id_curso}}">{{curso.descripcion_curso}}</ion-option>
   </ion-select>
 </ion-item>
-<button ion-button [disabled]="!isenabled" block (click)="IngresarAlumnosAcursos()" style="background:rgba(127, 179, 213 ,.6)">INGRESAR ALUMNOS A CURSO</button>
+<button ion-button [disabled]="!isenabled" block (click)="IngresarAlumnosAcursos()" color="but">INGRESAR ALUMNOS A CURSO</button>
  </div>
   <div *ngIf="mostrarComisionesDeCurso">
              <ion-item>

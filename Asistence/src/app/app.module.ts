@@ -27,6 +27,7 @@ import { DatePipe } from '@angular/common';
 import {Estadisticas} from'../pages/estadisticas/estadisticas';
 import { ChartModule } from 'angular2-highcharts';
 import * as highcharts from 'Highcharts';
+import {Settings} from '../providers/settings';
 
  
 
@@ -129,7 +130,8 @@ export function getAuthHttp(http,options:RequestOptions) {
    {provide: AuthHttp,
     useFactory: getAuthHttp,
     deps: [Http]},
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Settings
   ]
 })
 export class AppModule {}
