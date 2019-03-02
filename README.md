@@ -1,4 +1,7 @@
-﻿# Attendace List Manager
+
+![alt text](https://github.com/Armocidautn/TP_lab4/blob/master/screenshot.png?raw=true)
+
+# Attendace List Manager
 
 Es una aplicación destinada a agilizar el proceso de almacenar los datos obtenidos de una clase al tomar asistencia y gráficos estadísticos que surgen de encuestas que se pueden realizar desde la misma aplicación. 
 
