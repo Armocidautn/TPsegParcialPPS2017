@@ -1,5 +1,5 @@
 
-![alt text](https://github.com/Armocidautn/TP_lab4/blob/master/screenshot.png?raw=true)
+![alt text](TPsegParcialPPS2017/screenshot.png?raw=true)
 
 # Attendace List Manager
 
